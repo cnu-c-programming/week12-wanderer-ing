@@ -11,9 +11,12 @@ int main(int argc, const char* argv[]) {
     int count = 0;
     Student students[64];
 
-    while(feof(fp)==0){
-        fscanf(fp, "%s %d", students[count].name, &students[count].score);
+    while(fscanf(fp,"%s %d", students[count].name, &students[count].score)==2){
         count++;
+
+        if(feof(fp)){
+            break;
+        }
     }
 
     int max = 0;

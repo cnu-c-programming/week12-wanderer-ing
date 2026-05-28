@@ -11,7 +11,7 @@ int main(int argc, const char* argv[]) {
     char buffer[100];
     while (fgets(buffer,sizeof(buffer),fp)!=NULL){
         if(strstr(buffer,target_str)!=NULL){
-            printf("%s\n",buffer);
+            printf("%s",buffer);
         }
     } 
     
