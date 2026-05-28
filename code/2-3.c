@@ -3,7 +3,6 @@
 void logger(char* message) {
     FILE* fp = fopen("log.txt", "a");
     fprintf(fp, "%s\n", message);
-    /* 빈칸 (fclose(fp);) */
 }
 
 int job() {
